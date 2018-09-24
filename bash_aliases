@@ -1,0 +1,12 @@
+alias gd='git diff --color'
+alias gdc='git diff --cached --color'
+alias gs='git status'
+alias up1='cd ..'
+alias up2='cd ../../'
+alias up3='cd ../../../'
+alias x='exit'
+alias h='history'
+alias v='vim'
+alias ll='ls -l'
+
+PS1='\u@\h[\w] > '
