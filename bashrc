@@ -3,7 +3,9 @@ then
   . ~/.bash_aliases
 fi
 
-if [ $TERM_PROGRAM = "Apple_Terminal" ]
+# Add flutter install dir to path
+if [ $TERM_PROGRAM ] && [ $TERM_PROGRAM = "Apple_Terminal" ]
 then
-  export PATH=/Users/chris/dev/flutter/bin:$PATH
+  export FLUTTER_BIN=/Users/chris/dev/flutter/bin
+  export PATH=$FLUTTER_BIN:$PATH
 fi

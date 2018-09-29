@@ -7,6 +7,6 @@ alias up3='cd ../../../'
 alias x='exit'
 alias h='history'
 alias v='vim'
-alias ll='ls -l'
+alias ll='ls -lG'
 
 PS1='\u@\h[\w] > '
