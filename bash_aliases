@@ -9,4 +9,4 @@ alias h='history'
 alias v='vim'
 alias ll='ls -lG'
 
-PS1='\u@\h[\w] > '
+PS1='\u@\h[\w] $ '
