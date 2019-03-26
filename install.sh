@@ -16,6 +16,9 @@ done
 if [ $TERM_PROGRAM ] && [ $TERM_PROGRAM = "Apple_Terminal" ]
 then
   cp bash_profile ~/.bash_profile
+elif [[ ! -e ~/.bash_profile ]]
+then
+  cp bash_profile ~/.bash_profile
 fi
 
 cp bashrc ~/.bashrc
