@@ -10,3 +10,8 @@ alias v='vim'
 alias ll='ls -lG'
 
 PS1='\u@\h[\w] $ '
+
+if [[ "$OS" == "Windows_NT" ]]; then
+  alias python='winpty python'
+  alias ipython='winpty ipython'
+fi
