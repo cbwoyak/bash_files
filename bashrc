@@ -9,3 +9,7 @@ then
   export FLUTTER_BIN=/Users/chris/dev/flutter/bin
   export PATH=$FLUTTER_BIN:$PATH
 fi
+
+if [[ -d ~/.pyenv ]]; then
+  eval "$(pyenv init -)"
+fi
