@@ -7,11 +7,8 @@ alias up3='cd ../../../'
 alias x='exit'
 alias h='history'
 alias v='vim'
-alias ll='ls -lG'
+alias ls='ls -G'
+alias ll='ls -l'
+alias la='ls -la'
 
-PS1='\u@\h[\w] $ '
-
-if [[ "$OS" == "Windows_NT" ]]; then
-  alias python='winpty python'
-  alias ipython='winpty ipython'
-fi
+PS1='\u@\h[\w] > '

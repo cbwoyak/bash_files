@@ -11,15 +11,32 @@ do
   esac
 done
 
-# if we are on MacOS, copy bash profile, since 
-# this is read at the start of each shell
-if [ $TERM_PROGRAM ] && [ $TERM_PROGRAM = "Apple_Terminal" ]
+backup=~/.bash_bak
+
+if [[ -d $backup ]] && [[ -w $backup ]]
 then
-  cp bash_profile ~/.bash_profile
-elif [[ ! -e ~/.bash_profile ]]
-then
-  cp bash_profile ~/.bash_profile
+  rm -rf $backup
 fi
 
-cp bashrc ~/.bashrc
-cp bash_aliases ~/.bash_aliases
+mkdir $backup
+if [[ -d $backup ]]
+then
+  if [[ -f ~/.bashrc ]]
+  then
+    mv ~/.bashrc $backup
+  fi
+
+  if [[ -f ~/.bash_aliases ]]
+  then
+    mv ~/.bash_aliases $backup
+  fi
+
+  if [[ -f ~/.bash_profile ]]
+  then
+    mv ~/.bash_profile $backup
+  fi
+
+  cp bashrc ~/.bashrc
+  cp bash_aliases ~/.bash_aliases
+  cp bash_profile ~/.bash_profile
+fi
