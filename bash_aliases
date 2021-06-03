@@ -1,6 +1,7 @@
 alias gd='git diff --color'
 alias gdc='git diff --cached --color'
 alias gs='git status'
+alias ga='git add'
 alias up1='cd ..'
 alias up2='cd ../../'
 alias up3='cd ../../../'
