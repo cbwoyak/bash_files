@@ -6,6 +6,7 @@ alias up1='cd ..'
 alias up2='cd ../../'
 alias up3='cd ../../../'
 alias x='exit'
+alias less='less -R' # for retaining colored output
 alias h='history | less'
 alias rh='history | less +G'
 alias v='vim'
